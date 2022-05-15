@@ -22,6 +22,14 @@
     <PackageReference Include="System.Threading.Channels" Version="6.0.0" />
     <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="build.sh" />
+    <Content Include="Protos.proto">
+      <Pack>true</Pack>
+      <PackagePath>./protos/Proto.Actor</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <Protobuf Include="Protos.proto" GrpcServices="Server" />
